@@ -1,0 +1,6 @@
+data/de.skutter.GeminiBrowser.desktop.in
+data/de.skutter.GeminiBrowser.appdata.xml.in
+data/de.skutter.GeminiBrowser.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=gemini-browser
+Exec=gemini-browser
+Icon=de.skutter.GeminiBrowser
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
