@@ -30,11 +30,20 @@ template GeminiBrowserWindow : Adw.ApplicationWindow {
         "title-1",
       ]
     }
+    Button my_button {
+      label: "Click Here!";
+      clicked => $on_my_button_clicked();
+    }
   }
 }
 
 menu primary_menu {
   section {
+    item {
+      label: _("Bookmarks");
+      action: "app.bookmarks";
+    }
+
     item {
       label: _("_Preferences");
       action: "app.preferences";
@@ -46,7 +55,7 @@ menu primary_menu {
     }
 
     item {
-      label: _("_About Gemini-browser");
+      label: _("_About Gemini Browser");
       action: "app.about";
     }
   }

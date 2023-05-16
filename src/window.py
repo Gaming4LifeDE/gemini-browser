@@ -25,6 +25,13 @@ class GeminiBrowserWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GeminiBrowserWindow'
 
     label = Gtk.Template.Child()
+    my_button = Gtk.Template.Child()
+    my_button_click_counter = 0
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+    @Gtk.Template.Callback("on_my_button_clicked")
+    def on_my_button_clicked(self, button):
+        self.my_button_click_counter += 1
+        self.label.set_text(f"clicked {self.my_button_click_counter} times")
