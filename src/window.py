@@ -19,19 +19,19 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+from gi.repository import GtkSource
 
 @Gtk.Template(resource_path='/de/skutter/GeminiBrowser/window.ui')
 class GeminiBrowserWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GeminiBrowserWindow'
 
-    label = Gtk.Template.Child()
-    my_button = Gtk.Template.Child()
-    my_button_click_counter = 0
+    sourceview: GtkSource.View = Gtk.Template.Child()
+    print(dir(sourceview))
+    print(sourceview)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-    @Gtk.Template.Callback("on_my_button_clicked")
-    def on_my_button_clicked(self, button):
-        self.my_button_click_counter += 1
-        self.label.set_text(f"clicked {self.my_button_click_counter} times")
+    # @Gtk.Template.Callback("on_my_button_clicked")
+    # def on_my_button_clicked(self, button):
+    #     self.my_button_click_counter += 1
+    #     self.label.set_text(f"clicked {self.my_button_click_counter} times")

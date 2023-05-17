@@ -22,8 +22,9 @@ import gi
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
+gi.require_version("GtkSource", "5")
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GtkSource
 from .window import GeminiBrowserWindow
 
 
@@ -36,6 +37,7 @@ class GeminiBrowserApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
+        GtkSource.init()
 
     def do_activate(self):
         """Called when the application is activated.

@@ -30,7 +30,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/sebastian/Projekte"
+                    "url" : "file:///home/sebastian/Projects/gemini-browser"
                 }
             ]
         }

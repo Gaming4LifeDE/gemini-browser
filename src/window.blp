@@ -24,8 +24,9 @@ template GeminiBrowserWindow : Adw.ApplicationWindow {
     }
 
 
-    GtkSource.View {
-
+    GtkSource.View sourceview {
+        vexpand: true;
+        show-line-numbers: true;
     }
     // Label label {
     //   label: "Hello, World!";
