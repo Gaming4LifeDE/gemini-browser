@@ -1,5 +1,6 @@
 using Gtk 4.0;
 using Adw 1;
+using GtkSource 5;
 
 template GeminiBrowserWindow : Adw.ApplicationWindow {
   default-width: 600;
@@ -22,18 +23,22 @@ template GeminiBrowserWindow : Adw.ApplicationWindow {
       }
     }
 
-    Label label {
-      label: "Hello, World!";
-      vexpand: true;
 
-      styles [
-        "title-1",
-      ]
+    GtkSource.View {
+
     }
-    Button my_button {
-      label: "Click Here!";
-      clicked => $on_my_button_clicked();
-    }
+    // Label label {
+    //   label: "Hello, World!";
+    //   vexpand: true;
+
+    //   styles [
+    //     "title-1",
+    //   ]
+    // }
+    // Button my_button {
+    //   label: "Click Here!";
+    //   clicked => $on_my_button_clicked();
+    // }
   }
 }
 

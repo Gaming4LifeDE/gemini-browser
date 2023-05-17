@@ -7,7 +7,7 @@
 i18n = import('i18n')
 gnome = import('gnome')
 
-
+libgtksourceview_dep = dependency('gtksourceview-5', version: '5.8.0')
 
 subdir('data')
 subdir('src')
