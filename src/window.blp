@@ -27,6 +27,7 @@ template GeminiBrowserWindow : Adw.ApplicationWindow {
     GtkSource.View sourceview {
         vexpand: true;
         show-line-numbers: true;
+        editable: false;
     }
     // Label label {
     //   label: "Hello, World!";
@@ -46,10 +47,34 @@ template GeminiBrowserWindow : Adw.ApplicationWindow {
 menu primary_menu {
   section {
     item {
+      label: _("Save Page");
+      action: "app.save";
+    }
+
+    item {
+      label: _("Print Page");
+      action: "app.print";
+    }
+  }
+
+  section {
+    item {
+      label: _("History");
+      action: "app.history";
+    }
+
+    item {
       label: _("Bookmarks");
       action: "app.bookmarks";
     }
 
+    item {
+      label: _("Identity Profiles");
+      action: "app.identities";
+    }
+  }
+
+  section {
     item {
       label: _("_Preferences");
       action: "app.preferences";
